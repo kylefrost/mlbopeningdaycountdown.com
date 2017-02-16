@@ -1,7 +1,6 @@
 <?php
 
 $cookie_name = 'mlb_team_openingday';
-$team = $_COOKIE[$cookie_name];
 
 $team_info = array(
     "diamondbacks" => array("date" => new DateTime('2017-04-02 16:10:00 -05:00'), "colors" => array("text" => "#A71930", "bg" => "#D9C89EC")),

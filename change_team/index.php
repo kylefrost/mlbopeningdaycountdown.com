@@ -22,6 +22,24 @@
         <br /><br />
         <div style="font-size: 10px;opacity: 0.5;">Note: This site uses cookies to remember which team you choose.<br />Please enable them to use this countdown.</div>
         </div>
+        <script>
+            $(document).ready(function() {
+                    if("<?php echo $timezone; ?>".length != 0) {
+                        var timezone = new Date().toLocaleTimeString('en-us',{timeZoneName:'short'}).split(' ')[2]
+                        console.log(timezone);
+                        $.ajax({
+                            type: "GET",
+                            url: "/php/timezone.php",
+                            data: 'time='+ timezone,
+                            success: function() {
+                                location.reload();
+                            }
+                        });
+                    } else {
+                        console.log("The PHP $timezone is <?php echo $timezone; ?>");
+                    }
+            });
+        </script>
         <script src="/js/change_team.js"></script>
         <script src="/js/google.js"></script>
     </body>

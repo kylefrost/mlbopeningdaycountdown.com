@@ -46,8 +46,7 @@
         <script>
             $(document).ready(function() {
                 if("<?php echo $timezone; ?>".length == 0) {
-                    var rightNow = new Date();
-                    var timezone = String(String(rightNow).split("(")[1]).split(")")[0];
+                    var timezone = new Date().toLocaleTimeString('en-us',{timeZoneName:'short'}).split(' ')[2]
                     console.log(timezone);
                     $.ajax({
                         type: "GET",
@@ -58,7 +57,7 @@
                         }
                     });
                 } else {
-                    console.log("<?php echo $timezone; ?>");
+                    console.log("The PHP $timezone is <?php echo $timezone; ?>");
                 }
             });
 
