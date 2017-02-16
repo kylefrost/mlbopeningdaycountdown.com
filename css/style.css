@@ -1,0 +1,113 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:100,300';
+* {
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+body {
+  background-color: #f4f4f4;
+  color: #545454;
+}
+.wrap {
+  /* Center vertically and horizontally in page */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+}
+#main-text {
+  font-size: 120pt;
+  font-size: 20vw;
+  font-weight: 100;
+}
+#month,
+#day,
+#year,
+#divider1,
+#divider2 {
+  opacity: 0;
+}
+#countdown {
+  font-weight: 100;
+  opacity: 0;
+}
+.container {
+  display: inline-block;
+  width: 10vw;
+}
+years,
+months,
+weeks,
+days,
+hours,
+minutes,
+seconds {
+  font-size: 60pt;
+  font-size: 8vw;
+  opacity: 0.7;
+  width: 100%;
+  display: inline-block;
+}
+label {
+  width: 100%;
+  display: inline-block;
+  font-weight: 300;
+  font-size: 15pt;
+  font-size: 2vw;
+  opacity: 0.5;
+}
+#change_team {
+  font-size: 1vw;
+  text-decoration: none;
+  text-align: center;
+  position: absolute;
+  width: 100vw;
+  bottom: 5px;
+  left: 0;
+}
+@media screen and (max-width: 480px) {
+  label {
+    font-size: 5pt;
+    font-size: 2vw;
+    opacity: 1;
+  }
+  years,
+  months,
+  weeks,
+  days,
+  hours,
+  minutes,
+  seconds {
+    font-size: 25pt;
+    font-size: 8vw;
+    opacity: 1;
+  }
+  #change_team {
+    font-size: 2.5vw;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  animation: fadeIn 2s ease 0s forwards;
+}
