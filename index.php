@@ -1,7 +1,7 @@
 <?php
     $cookie_name = 'mlb_team_openingday';
     $get_team = $_GET['team'];
-    
+
     if(isset($_GET['team'])) {
         $team = $get_team;
         include('php/countdown.php');

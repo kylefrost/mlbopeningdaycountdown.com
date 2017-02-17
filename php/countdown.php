@@ -39,6 +39,19 @@
         </div>
         <a id="change_team" style="color: <?php echo $team_info[$team]['colors']['text'] ?>;" href="/change_team">Change Team</a>
         <script>
+            function paramExists(param) {
+                var url = window.location.href;
+                if(url.indexOf('?' + param + '=') != -1)
+                        return true;
+                else if(url.indexOf('&' + param + '=') != -1)
+                        return true;
+                return false
+            }
+
+            if(!paramExists('team')) {
+                window.location = window.location + "?team=<?php echo $team; ?>";
+            }
+
             $(document).ready(function() {
                 if("<?php echo $timezone; ?>".length == 0) {
                     var timezone = jstz.determine().name();
