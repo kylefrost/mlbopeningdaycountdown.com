@@ -2,12 +2,7 @@
 <html>
     <head>
         <title>Opening Day Countdown</title>
-        <script src="/js/countdown.min.js"></script>
-        <script src="/js/moment.min.js"></script>
-        <script src="/js/moment-countdown.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link href="/css/style.css" rel="stylesheet">
+        <?php include('head.php'); ?>
     </head>
     <?php include('team_info.php'); include('time.php'); ?>
     <body style="background-color: <?php echo $team_info[$team]['colors']['bg'] ?>;color: <?php echo $team_info[$team]['colors']['text'] ?>;">
@@ -46,7 +41,7 @@
         <script>
             $(document).ready(function() {
                 if("<?php echo $timezone; ?>".length == 0) {
-                    var timezone = new Date().toLocaleTimeString('en-us',{timeZoneName:'short'}).split(' ')[2]
+                    var timezone = jstz.determine().name();
                     console.log(timezone);
                     $.ajax({
                         type: "GET",

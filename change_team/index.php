@@ -2,9 +2,7 @@
 <html>
     <head>
         <title>Set Your Team</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link href="/css/style.css" rel="stylesheet"> 
+        <?php include('../php/head.php'); ?>
     </head>
     <body>
         <div class="wrap">
@@ -24,20 +22,18 @@
         </div>
         <script>
             $(document).ready(function() {
-                    if("<?php echo $timezone; ?>".length != 0) {
-                        var timezone = new Date().toLocaleTimeString('en-us',{timeZoneName:'short'}).split(' ')[2]
-                        console.log(timezone);
-                        $.ajax({
-                            type: "GET",
-                            url: "/php/timezone.php",
-                            data: 'time='+ timezone,
-                            success: function() {
-                                location.reload();
-                            }
-                        });
-                    } else {
-                        console.log("The PHP $timezone is <?php echo $timezone; ?>");
-                    }
+                if("<?php echo $timezone; ?>" != 0) {
+                    var timezone = jstz.determine().name();
+                    console.log(timezone);
+                    $.ajax({
+                        type: "GET",
+                        url: "/php/timezone.php",
+                        data: 'time='+ timezone,
+                        success: function() {
+                            location.reload();
+                        }
+                    });
+                }
             });
         </script>
         <script src="/js/change_team.js"></script>
