@@ -50,7 +50,6 @@ minutes,
 seconds {
   font-size: 60pt;
   font-size: 8vw;
-  opacity: 0.7;
   width: 100%;
   display: inline-block;
 }
@@ -60,7 +59,6 @@ label {
   font-weight: 300;
   font-size: 15pt;
   font-size: 2vw;
-  opacity: 0.5;
 }
 #change_team {
   font-size: 1vw;
@@ -75,7 +73,6 @@ label {
   label {
     font-size: 5pt;
     font-size: 2vw;
-    opacity: 1;
   }
   years,
   months,
@@ -86,7 +83,6 @@ label {
   seconds {
     font-size: 25pt;
     font-size: 8vw;
-    opacity: 1;
   }
   #change_team {
     font-size: 2.5vw;

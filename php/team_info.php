@@ -13,7 +13,7 @@ $team_info = array(
     "indians" => array("date" => new DateTime('2017-04-03 19:05:00 -05:00'), "colors" => array("text" => "#D50032", "bg" => "#0C2340")),
     "rockies" => array("date" => new DateTime('2017-04-03 14:10:00 -05:00'), "colors" => array("text" => "#24135E", "bg" => "#000000")),
     "tigers" => array("date" => new DateTime('2017-04-03 16:10:00 -05:00'), "colors" => array("text" => "#FA4614", "bg" => "#0C2340")),
-    "marlins" => array("date" => new DateTime('2017-04-03 13:05:00 -05:00'), "colors" => array("text" => "#F9423B", "bg" => "#0482CC")),
+    "marlins" => array("date" => new DateTime('2017-04-03 13:05:00 -05:00'), "colors" => array("text" => "#FCDE04", "bg" => "#0482CC")),
     "astros" => array("date" => new DateTime('2017-04-03 20:10:00 -05:00'), "colors" => array("text" => "#FF7F00", "bg" => "#072854")),
     "royals" => array("date" => new DateTime('2017-04-03 16:10:00 -05:00'), "colors" => array("text" => "#74B4FA", "bg" => "#15317E")),
     "angels" => array("date" => new DateTime('2017-04-04 02:05:00 -05:00'), "colors" => array("text" => "#BA032E", "bg" => "#0C2344")),
