@@ -16,5 +16,6 @@
                 |___/                     
 
 Contact: kyle@kylefrost.me
+Source code: github.com/kylefrost/mlbopeningdaycountdown.com
 
 --!>
