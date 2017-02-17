@@ -9,7 +9,7 @@ $("#setTeamForm").submit(function(e) {
             console.log(response);
             if (response.success) {
                 console.log(response.team);
-                location.reload(true);
+                window.location = "/?team=" + response.team;
             } else {
                 console.log(response.error);
             }
