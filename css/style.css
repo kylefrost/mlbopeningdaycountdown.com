@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Roboto:100,300';
+@import 'https://fonts.googleapis.com/css?family=Roboto:100,300,500';
 * {
   font-family: 'Roboto', sans-serif;
   overflow: hidden;
@@ -51,12 +51,13 @@ seconds {
   font-size: 60pt;
   font-size: 8vw;
   width: 100%;
+  font-weight: 300;
   display: inline-block;
 }
 label {
   width: 100%;
   display: inline-block;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 15pt;
   font-size: 2vw;
 }
