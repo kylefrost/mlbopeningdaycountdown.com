@@ -35,20 +35,32 @@ function fadeInObjects() {
 window.onload = fadeInObjects;
 
 function getCountdown(target) {
-    var m = moment().countdown(target, countdown.YEARS|countdown.MONTHS|countdown.WEEKS|countdown.DAYS|countdown.HOURS|countdown.MINUTES|countdown.SECONDS, NaN);
-    var t = {
-        'years'   :  m.years,
-        'months'  :  m.months,
-        'weeks'   :  m.weeks,
-        'days'    :  m.days,
-        'hours'   :  m.hours,
-        'minutes' :  m.minutes,
-        'seconds' :  m.seconds
-    };
+    if (moment() < moment(end)) {
+        var m = moment().countdown(target, countdown.YEARS|countdown.MONTHS|countdown.WEEKS|countdown.DAYS|countdown.HOURS|countdown.MINUTES|countdown.SECONDS, NaN);
+        var t = {
+            'years'   :  m.years,
+            'months'  :  m.months,
+            'weeks'   :  m.weeks,
+            'days'    :  m.days,
+            'hours'   :  m.hours,
+            'minutes' :  m.minutes,
+            'seconds' :  m.seconds
+        };
+    } else {
+        var t = {
+            'years'   :  0,
+            'months'  :  0,
+            'weeks'   :  0,
+            'days'    :  0,
+            'hours'   :  0,
+            'minutes' :  0,
+            'seconds' :  0
+        };
+    }
     return t;
 }
 
-setInterval(function() {
+var countdownTimer = setInterval(function() {
     // Get current countdown
     var countdown = getCountdown(end);
 
@@ -87,5 +99,16 @@ setInterval(function() {
     hourLabel.innerHTML = (countdown.hours == 1) ? "HOUR" : "HOURS";
     minuteLabel.innerHTML = (countdown.minutes == 1) ? "MINUTE" : "MINUTES";
     secondLabel.innerHTML = (countdown.seconds == 1) ? "SECOND" : "SECONDS";
+
+    if (countdown.months == 0 && countdown.weeks == 0 && countdown.days == 0 && countdown.hours == 0 && countdown.minutes == 0 && countdown.seconds == 0) {
+        document.getElementById("countdown").style.display = "none";
+        document.getElementById("divider1").style.display = "none";
+        document.getElementById("divider2").style.display = "none";
+        document.getElementById("day").style.display = "none";
+        document.getElementById("year").style.display = "none";
+        document.getElementById("month").innerHTML = "Play Ball!";
+        clearInterval(countdownTimer);
+    }
+
 }, 1000);
 
