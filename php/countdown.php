@@ -1,10 +1,10 @@
+<?php include('time.php'); ?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Opening Day Countdown</title>
         <?php include('head.php'); ?>
     </head>
-    <?php include('team_info.php'); include('time.php'); ?>
     <body style="background-color: <?php echo $team_info[$team]['colors']['bg'] ?>;color: <?php echo $team_info[$team]['colors']['text'] ?>;">
         <div class="wrap">
             <div id="main-text">

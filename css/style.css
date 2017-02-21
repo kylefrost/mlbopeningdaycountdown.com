@@ -61,7 +61,8 @@ label {
   font-size: 15pt;
   font-size: 2vw;
 }
-#change_team {
+#change_team,
+#change_team_404 {
   font-size: 1vw;
   text-decoration: none;
   text-align: center;
@@ -69,6 +70,11 @@ label {
   width: 100vw;
   bottom: 5px;
   left: 0;
+}
+#change_team_404 {
+  position: relative;
+  color: #545454;
+  bottom: 0px;
 }
 @media screen and (max-width: 480px) {
   label {
